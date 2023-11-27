@@ -10,14 +10,18 @@
         form {
             margin: 30px;
             padding: 20px;
-            background-color: #E7E9EB;
-            border: 1px solid #ccc;
+            background-color: #04AA6D;
             border-radius: 4px;
+            color: #fff;
         }
 
         h1 {
             text-align: center;
             padding-top: 10px;
+        }
+
+        label {
+            font-size: 18px;
         }
     </style>
 </head>
@@ -33,20 +37,37 @@
             <label for="phone" class="form-label">Phone:</label>
             <input type="text" class="form-control" id="phone" placeholder="Enter phone" name="phone">
         </div>
+        <div class="mb-3">
+            <label for="age" class="form-label">Age</label>
+            <input type="range" class="form-range" id="age" name="age" required>
+        </div>
         <div class="mb-3 mt-3">
             <label for="email" class="form-label">Email:</label>
             <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
         </div>
         <div class="mb-3">
-        <label for="comment">Message:</label>
-            <textarea class="form-control" rows="10 cols="30" id="comment" name="text" required></textarea>
+            <label for="comment">Message:</label>
+            <textarea class="form-control" rows="10" cols="30" id="comment" name="text" required></textarea>
+        </div>
+        <div class="mb-3 mt-3">
+            <label for="category" class="form-label">Сategory:</label>
+            <select class="form-select" id="category" name="category">
+                <option>Sport</option>
+                <option>Technology</option>
+                <option>Movies</option>
+                <option value="Other">Other (write down)</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="other">Other:</label>
+            <input type="text" class="form-control" id="other" placeholder="Enter your category" name="other">
         </div>
         <div class="form-check mb-3">
             <label class="form-check-label">
-              <input class="form-check-input" type="checkbox" name="confirm" required> Agree to the terms
+                <input class="form-check-input" type="checkbox" name="confirm" required> Agree to the terms
             </label>
-          </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <button type="submit" class="btn btn-light">Submit</button>
     </form>
 </body>
 

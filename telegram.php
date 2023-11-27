@@ -14,16 +14,26 @@ include 'credits.php';
 //Переменные $name, $phone, $mail получают данные из формы
 $name = $_POST['name'];
 $phone = $_POST['phone'];
+$age = $_POST['age'];
 $email = $_POST['email'];
 $txt = $_POST['text'];
+$category = $_POST['category'];
+
+if (isset($_POST['other']) && $category === 'Other') {
+    $category = $_POST['other'];
+}
 
 //В массив $arr помещаем полученную информацию
 $arr = [
     'Ім\'я: ' => "<u>$name</u>",
-    'Телефон : ' => $phone,
+    'Телефон: ' => $phone,
+    'Вік: ' => $age,
     'Пошта: ' => $email,
     'Повідомлення: ' => "<i>$txt</i>",
+    'Категорія: ' => $category
 ];
+
+
 $text = "";
 //При помощи цикла foreach формируем строку $text из данных массива $arr
 foreach ($arr as $key => $value) {
